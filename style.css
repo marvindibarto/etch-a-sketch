@@ -1,0 +1,4 @@
+/* the !important is necessary, otherwise the color is not forced onto the square bs its properties are overrridden (see script.js for more info) */
+.hovered{
+    background-color: red !important;
+}

@@ -18,7 +18,7 @@ div.style.display = "flex";
 div.style.flexWrap = "wrap";
 
 
-produceSquares(100);
+produceSquares(1000);
 
 //create function to produce an amount of squares and append them to the div
 function produceSquares(amount){
@@ -40,6 +40,16 @@ for (const child of div.children){
     child.style.flexGrow = 0;
     child.style.flexShrink = 0;
     child.style.backgroundColor = "blue";
+
+    //this is one way to make the background color change when the mouse enters the dedicated square
+    // child.addEventListener("mouseenter",(event)=>{
+    //     event.target.style.backgroundColor = "red";
+    // })
+
+    //this is the other way and completely interchangable but needs a style.css sheet (see there for more infos)
+    child.addEventListener("mouseenter",(event)=>{
+        event.target.classList.add("hovered");
+    })
 }
 
 
