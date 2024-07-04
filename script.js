@@ -8,7 +8,23 @@ let amount = 5;
     // let amountSquares = width*height/16/1
 
 
-//select target for squares to be put in
+
+
+
+const colors = [];
+colors.push("red");
+colors.push("green");
+colors.push("blue");
+colors.push("orange");
+colors.push("yellow");
+colors.push("grey");
+colors.push("purple");
+colors.push("greenyellow");
+colors.push("wheat");
+colors.push("firebrick");
+
+
+    // select target for squares to be put in
 const div = document.querySelector("div");
 
 //style div of container of squares
@@ -93,13 +109,16 @@ function setStartProperties(child){
 
             //this is one way to make the background color change when the mouse enters the dedicated square
             child.addEventListener("mouseenter",(event)=>{
-                event.target.style.backgroundColor = "red";
+                
+                event.target.style.backgroundColor = colors[Math.floor(Math.random()*9)];
+
             })
     
 
             //this is the other way and completely interchangable but needs a style.css sheet (see there for more infos)
             // child.addEventListener("mouseenter",(event)=>{
-            //     event.target.classList.add("hovered");
+            //     event.target.classList.add("hovered1");
+                
             // })
     }
 }
