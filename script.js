@@ -106,18 +106,27 @@ function setStartProperties(child){
             child.style.flexGrow = 0;
             child.style.flexShrink = 0;
             child.style.backgroundColor = "blue";
+            child.style.opacity = "0.1";
 
             //this is one way to make the background color change when the mouse enters the dedicated square
-            child.addEventListener("mouseenter",(event)=>{
+            child.addEventListener("mouseover",(event)=>{
                 
-                event.target.style.backgroundColor = colors[Math.floor(Math.random()*9)];
+                //This was the old version, where the square would be read when hovered
+                //event.target.style.backgroundColor = "red";
+                
+                //Use this to assign random colors to squares when hovered
+                //event.target.style.backgroundColor = colors[Math.floor(Math.random()*9)];
 
+                //This is a last variation, where the squares opacity is increased by 10% each time its hovered
+                let opacity = Number(event.target.style.opacity);
+                console.log(opacity)
+                event.target.style.opacity = opacity +0.1/400
             })
     
 
             //this is the other way and completely interchangable but needs a style.css sheet (see there for more infos)
             // child.addEventListener("mouseenter",(event)=>{
-            //     event.target.classList.add("hovered1");
+            //     event.target.classList.add("hovered");
                 
             // })
     }

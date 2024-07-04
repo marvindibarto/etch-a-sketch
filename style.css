@@ -1,31 +1,4 @@
 /* the !important is necessary, otherwise the color is not forced onto the square bs its properties are overrridden (see script.js for more info) */
-.hovered1{
-    background-color: red !important;
-}
-.hovered2{
-    background-color: red !important;
-}
-.hovered3{
-    background-color: red !important;
-}
-.hovered4{
-    background-color: red !important;
-}
-.hovered5{
-    background-color: red !important;
-}
-.hovered6{
-    background-color: red !important;
-}
-.hovered7{
-    background-color: red !important;
-}
-.hovered8{
-    background-color: red !important;
-}
-.hovered9{
-    background-color: red !important;
-}
-.hovered10{
+.hovered{
     background-color: red !important;
 }
